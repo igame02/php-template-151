@@ -1,9 +1,9 @@
 {
-    "name": "mineichen/Datenbankprojekt",
+    "name": "igame02/Datenbankprojekt",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "mineichen\\": "src/"
+            "igame02\\": "src/"
         }
     },
     "require": {

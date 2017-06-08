@@ -1,18 +1,18 @@
 <?php
 
-namespace mineichen\Controller;
+namespace igame02\Controller;
 
-use mineichen\SimpleTemplateEngine;
+use igame02\SimpleTemplateEngine;
 
 class IndexController 
 {
   /**
-   * @var mineichen\SimpleTemplateEngine Template engines to render output
+   * @var igame02\SimpleTemplateEngine Template engines to render output
    */
   private $template;
   
   /**
-   * @param mineichen\SimpleTemplateEngine
+   * @param igame02\SimpleTemplateEngine
    */
   public function __construct(\Twig_Environment $template)
   {
@@ -24,6 +24,11 @@ class IndexController
   }
 
   public function greet($name) {
-  	echo $this->template->render("hello.html.twig", ["name" => $name]);
+  	echo $this->template->render("base.html.twig");
+  }
+
+  public function showHome()
+  {
+  	echo $this->template->render("base.html.twig");
   }
 }

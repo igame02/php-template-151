@@ -1,6 +1,6 @@
 <?php
 
-namespace mineichen\Service\Login;
+namespace igame02\Service\Login;
 
 class LoginPdoService implements LoginService
 {

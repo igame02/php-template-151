@@ -1,7 +1,7 @@
 <?php
 
 require_once("../vendor/autoload.php");
-$factory = mineichen\Factory::createFromIniFile(__DIR__ . "/../config.ini");
+$factory = igame02\Factory::createFromIniFile(__DIR__ . "/../config.ini");
 
 switch($_SERVER["REQUEST_URI"]) {
 	case "/":
@@ -13,6 +13,14 @@ switch($_SERVER["REQUEST_URI"]) {
 			$cnt->showLogin();
 		} else {
 			$cnt->login($_POST);
+		}
+		break;
+	case "/home":
+		$cnt = $factory->getIndexController();
+		if($_SERVER["REQUEST_METHOD"] === "GET") {
+			$cnt->showHome();
+		} else {
+			
 		}
 		break;
 	default:

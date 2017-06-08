@@ -1,19 +1,24 @@
-<!Doctype>
 <html>
 <head>
-	<title>My Login Page</title>
+	<title>{% block title 'Register' %}</title>
 </head>
 <body>
-	<h1>Login</h1>
+	<h1>Register for 'FÜF'</h1>
 	<form method="POST">
+		<label>
+			Username:
+			<input type="text" name="username" />
+		</label>
 		<label>
 			Email:
 			<input type="email" name="email" value="<?= (isset($email)) ? $email: "" ?>"/>
 		</label>
+		<p></p>
 		<label>
-			Passwort:
+			Password:
 			<input type="password" name="password" />
 		</label>
+		<p></p>
 		<input type="submit" name="login" value="Login" />
 	
 	</form>

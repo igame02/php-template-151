@@ -1,6 +1,6 @@
 <?php 
 
-namespace mineichen;
+namespace igame02;
 
 class Factory 
 {

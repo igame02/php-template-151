@@ -1,6 +1,6 @@
 <?php
 
-namespace mineichen\Service\Login;
+namespace igame02\Service\Login;
 
 interface LoginService
 {

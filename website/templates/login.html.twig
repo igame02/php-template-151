@@ -1,0 +1,23 @@
+<!Doctype>
+<html>
+<head>
+	<title>My Login Page</title>
+</head>
+<body>
+	<h1>Login 'FÜF'</h1>
+	<form method="POST">
+		<label>
+			Email:
+			<input type="email" name="email" value="<?= (isset($email)) ? $email: "" ?>"/>
+		</label>
+		<p></p>
+		<label>
+			Passwort:
+			<input type="password" name="password" />
+		</label>
+		<p></p>
+		<input type="submit" name="login" value="Login" />
+	
+	</form>
+</body>
+</html>
