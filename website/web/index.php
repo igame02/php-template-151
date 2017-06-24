@@ -23,6 +23,31 @@ switch($_SERVER["REQUEST_URI"]) {
 			
 		}
 		break;
+	case "/register":
+		$cnt = $factory->getLoginController();
+		if($_SERVER["REQUEST_METHOD"] === "GET") {
+			$cnt->showRegister();
+		} else {
+			$cnt->register($_POST);
+		}
+		break;
+	case "/upload":
+		$cnt = $factory->getFuefController();
+		if($_SERVER["REQUEST_METHOD"] === "GET") {
+			$cnt->showUpload();
+		} else {
+			
+		}
+		break;
+	case "/fuef":
+		$cnt = $factory->getFuefController();
+		if($_SERVER["REQUEST_METHOD"] === "GET") {
+			$cnt->showfuef();
+		}
+		else {
+			
+		}
+		break;
 	default:
 		$matches = [];
 		if(preg_match("|^/hello/(.+)$|", $_SERVER["REQUEST_URI"], $matches)) {

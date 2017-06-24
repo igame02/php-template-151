@@ -1,11 +1,29 @@
 <html>
 <head>
-	<title>{% block title 'Florian Metz' %}</title>
+	<title>{% block title 'FÜF' %}</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-	<h1>Meine Seite</h1>
-	<a href="/login">Login</a>
-	<a href="/register">Register</a>
-	{% block content '' %}
+	<h1>FÜF by Florian Metz</h1>
+ 		{% if email != "" %}
+        	<p>You are logged in as {{ email }}</p>
+ 			<a class="link" href="/logout">Logout</a>
+        {% else %}
+ 			<a class="link" href="/register">Register</a>
+ 			<a class="link" href="/login">Login</a>
+        {% endif %}
+ 		{% block content '' %}
+ 		
+ 		<p>
+ 		Here you can upload your personal FÜF:
+ 		</p>
+ 		<a class="link" href="/upload">Upload</a>
+ 		
+ 		<a class="link" href="/fuef">FÜF</a>
+ 		
 </body>
+<footer>
+	<p>&copy; 2017 FÜF by Florian Metz</p>
+</footer>
+
 </html>

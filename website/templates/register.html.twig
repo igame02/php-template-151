@@ -1,17 +1,19 @@
-<html>
-<head>
-	<title>{% block title 'Register' %}</title>
-</head>
-<body>
+{%  extends 'base.html.twig' %}
+{% block title%}
+
+	{{  parent()}} - Register
+{% endblock %}
+{% block content %}
+		
 	<h1>Register for 'FÜF'</h1>
 	<form method="POST">
 		<label>
 			Username:
-			<input type="text" name="username" />
+			<input type="text" name="username" value="{{ username }}">
 		</label>
 		<label>
 			Email:
-			<input type="email" name="email" value="<?= (isset($email)) ? $email: "" ?>"/>
+			<input type="email" name="email" value="{{ email }}"/>
 		</label>
 		<p></p>
 		<label>
@@ -19,8 +21,12 @@
 			<input type="password" name="password" />
 		</label>
 		<p></p>
-		<input type="submit" name="login" value="Login" />
+		<div class="error">{{ error }}</div>
+		<input type="hidden" name="registercsrf" value="{{ registerCsrf }}">
+		<input type="submit" name="register" value="Register" />
 	
 	</form>
-</body>
-</html>
+	<footer>
+	<p>&copy; 2017 FÜF by Florian Metz</p>
+</footer>	
+{% endblock %}
